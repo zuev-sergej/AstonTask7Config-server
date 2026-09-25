@@ -1,0 +1,16 @@
+services:
+
+  config-server:
+    build:
+      context: .
+    container_name: config-server
+
+    ports:
+      - "8888:8888"
+
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    external: true
